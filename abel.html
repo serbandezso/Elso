@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kvantum-Szövetség</title>
+  <title>Bibliai Történetek - Kvantum-Szövetség</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -44,9 +44,100 @@
       color: #5b9bd5;
     }
 
+    /* Oldalon belüli navigáció - Asztali verzió */
+    .internal-nav {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .internal-nav h3 {
+      margin-top: 0;
+      color: #1f4e79;
+      text-align: center;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1f4e79;
+      background-color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      border: 1px solid #e0e0e0;
+    }
+
+    .nav-links a:hover {
+      background-color: #1f4e79;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Mobilos kinyíló menü */
+    .mobile-nav-toggle {
+      display: none;
+      background-color: #1f4e79;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      width: 100%;
+      margin: 10px 0;
+      transition: background-color 0.3s ease;
+    }
+
+    .mobile-nav-toggle:hover {
+      background-color: #16385c;
+    }
+
+    .mobile-nav-content {
+      display: none;
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mobile-nav-links a {
+      text-decoration: none;
+      color: #1f4e79;
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      border: 1px solid #e0e0e0;
+      text-align: center;
+    }
+
+    .mobile-nav-links a:hover {
+      background-color: #1f4e79;
+      color: white;
+    }
+
     h2 {
       color: #1f4e79;
       margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
     }
 
     h3 {
@@ -66,11 +157,24 @@
       margin: 25px 0;
     }
 
-    .pillar {
-      margin-top: 10px;
-      padding: 10px;
-      border-left: 3px solid #f0ad4e;
-      background-color: #f9f9f9;
+    .story-section {
+      margin-bottom: 50px;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #fafafa;
+    }
+
+    .back-to-top {
+      display: block;
+      text-align: center;
+      margin: 20px 0;
+      color: #1f4e79;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-to-top:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -81,34 +185,119 @@
       border-top: 1px solid #eee;
       padding-top: 10px;
     }
+
+    /* Reszponzív design */
+    @media (max-width: 768px) {
+      .internal-nav {
+        display: none; /* Asztali menü elrejtése mobilon */
+      }
+      
+      .mobile-nav-toggle {
+        display: block; /* Mobilos gomb megjelenítése */
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .nav-links a {
+        width: 80%;
+        text-align: center;
+      }
+      
+      /* Sticky header mobilon */
+      header {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 100;
+        padding: 15px 0 10px 0;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .mobile-nav-toggle,
+      .mobile-nav-content {
+        display: none !important; /* Mobilos menü elrejtése asztalin */
+      }
+      
+      .internal-nav {
+        display: block; /* Asztali menü megjelenítése */
+        position: sticky;
+        top: 10px;
+        z-index: 100;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Bizonytalan-Bizonyosság</h1>
-   <nav>
+    <h1>Kvantum-Szövetség</h1>
+    <nav>
       <a href="index.html">Főoldal</a>
       <a href="hit-es-tuda.html">Hit és Tudás</a>
-      <a href="meghivo.html">Meghívás</a>
+      <a href="meghivas.html">Meghívás</a>
       <a href="elme.html">Elme</a>
       <a href="csend.html">Csend szava</a>
-         <a href="demokracia.html">Demokrácia</a>
-         <a href="abel.html">Bibliai történetek</a>
-               <a href="mag.html">A mag</a>
+      <a href="demokracia.html">Demokrácia</a>
+      <a href="abel.html">Bibliai történetek</a>
+      <a href="mag.html">A mag</a>
     </nav>
   </header>
-<main>
 
-  <h1>Ádám és Éva: A Tudat Ébredése a Különválásban</h1>
-  <hr>
+  <main>
+    <h1>Bibliai Történetek - A Kvantum-Szövetség Fényében</h1>
+    
+    <!-- Asztali navigáció (látható csak nagy képernyőn) -->
+    <div class="internal-nav">
+      <h3>Ugrás a történetekhez:</h3>
+      <div class="nav-links">
+        <a href="#adam-eva">Ádám és Éva</a>
+        <a href="#abel">Ábel</a>
+        <a href="#babel">Bábel Tornya</a>
+        <a href="#abraham">Ábrahám</a>
+        <a href="#sikem-dina">Sikem és Dina</a>
+        <a href="#jozsef">József</a>
+        <a href="#mozes">Mózes</a>
+        <a href="#jozsue">Józsué</a>
+        <a href="#jonas">Jónás</a>
+        <a href="#kiraly">Királyság</a>
+        <a href="#saul-david">Saul, Dávid és Salamon</a>
+      </div>
+    </div>
 
-  <h3>A bűnbeesés nem büntetés, hanem ébredés.  
-  A paradicsom nem veszett el, csak belülre költözött — oda, ahol a választás megszületik: az ember szívébe.</h3>
+    <!-- Mobilos kinyíló menü -->
+    <button class="mobile-nav-toggle" id="mobileNavToggle">
+      📖 Történetek menüje
+    </button>
+    
+    <div class="mobile-nav-content" id="mobileNavContent">
+      <div class="mobile-nav-links">
+        <a href="#adam-eva">Ádám és Éva</a>
+        <a href="#abel">Ábel</a>
+        <a href="#babel">Bábel Tornya</a>
+        <a href="#abraham">Ábrahám</a>
+        <a href="#sikem-dina">Sikem és Dina</a>
+        <a href="#jozsef">József</a>
+        <a href="#mozes">Mózes</a>
+        <a href="#jozsue">Józsué</a>
+        <a href="#jonas">Jónás</a>
+        <a href="#kiraly">Királyság</a>
+        <a href="#saul-david">Saul, Dávid és Salamon</a>
+      </div>
+    </div>
 
-  <hr>
-
-  <h2>I. 🌿 Az Ártatlanság Kertje</h2>
+    <!-- Ádám és Éva -->
+    <section id="adam-eva" class="story-section">
+      <h1>Ádám és Éva: A Tudat Ébredése a Különválásban</h1>
+      <hr>
+      <h3>A bűnbeesés nem büntetés, hanem ébredés.  
+      A paradicsom nem veszett el, csak belülre költözött — oda, ahol a választás megszületik: az ember szívébe.</h3>
+      <hr>
+      
+        <h2>I. 🌿 Az Ártatlanság Kertje</h2>
 
   <p>Ádám és Éva története az emberiség tükre, mielőtt a tudat önmagára ébredt.  
   A kert az Egység tere: minden mozdulat természetes, minden kapcsolat ártatlan.  
@@ -167,12 +356,12 @@
     Mert aki elválik, az képes újra egységre lelni —  
     és ez a megváltás lényege.
   </p>
+      <a href="#" class="back-to-top">↑ Vissza a menühöz</a>
+    </section>
 
-</main>
-  <main>
-    <!-- Ide kerül az oldal tartalma, pl. a névtelen.html szövege -->
-
-  <h1>Ábel: A Testvériség Tükre és a Szív Áldozata</h1>
+    <!-- Ábel -->
+    <section id="abel" class="story-section">
+      <h1>Ábel: A Testvériség Tükre és a Szív Áldozata</h1>
   <hr>
 
   <h3>Az emberi történelem első testvérpárja nem a vért, hanem a szándékot választotta el egymástól.  
@@ -234,11 +423,13 @@
     valahányszor a szív csendben kimondja:  
     <em>„Legyen meg a Te akaratod.”</em>
   </p>
+      <a href="#" class="back-to-top">↑ Vissza a menühöz</a>
+    </section>
 
-</main>
-<main>
-
-  <h1>Bábel Tornya: A Szeretet Nyelvének Zűrzavara</h1>
+    <!-- További történetek... -->
+    <!-- Bábel Tornya -->
+    <section id="babel" class="story-section">
+      <h1>Bábel Tornya: A Szeretet Nyelvének Zűrzavara</h1>
   <hr>
 
   <h3>Az ember mindig Istenhez akart emelkedni,  
@@ -307,11 +498,13 @@
     A torony kőből dőlt össze,  
     de a szeretet nyelve ma is érthető.
   </p>
+      <!-- További tartalom -->
+      <a href="#" class="back-to-top">↑ Vissza a menühöz</a>
+    </section>
 
-</main>
-<main>
-
-  <h1>Ábrahám: A Kiválasztottság Félreértése</h1>
+    <!-- Ábrahám -->
+    <section id="abraham" class="story-section">
+      <h1>Ábrahám: A Kiválasztottság Félreértése</h1>
   <hr>
 
   <h3>Ábrahám az elesett, akit Isten felemel.  
@@ -382,11 +575,12 @@
     hanem hogy a szeretet át tud-e rajtad folyni.  
     Az igazi örökség nem a név, hanem a nyitott szív.
   </p>
-
-</main>
-<main>
-
-  <h1>Sikem és Dina: A Kiválasztott Büszkeségének Árnyéka</h1>
+      <!-- További tartalom -->
+      <a href="#" class="back-to-top">↑ Vissza a menühöz</a>
+    </section>
+    <!-- Sikem és Dina -->
+    <section id="sikem-dina" class="story-section">   
+    <h1>Sikem és Dina: A Kiválasztott Büszkeségének Árnyéka</h1>
   <hr>
 
   <h3>A történet nem csupán erőszakról és bosszúról szól,  
@@ -471,11 +665,680 @@
     Mert aki a Forrást birtokolni akarja,  
     az mindig elveszíti a jelenlétét.
   </p>
+          <!-- További tartalom -->
+      <a href="#" class="back-to-top">↑ Vissza a menühöz</a>
+       </section>
 
-</main>
+    <!-- József -->
+    <section id="jozsef" class="story-section">   
+    <h1>József – Az Árulás, Amely Megment</h1>
+  <hr>
+
+  <h3>Az ember gyakran azt hiszi, hogy a sorsa összeomlott,  
+  pedig csak az illúziók égnek el körülötte.  
+  József története annak a felismerése,  
+  hogy az árulás is a szeretet útját szolgálja —  
+  csak még nem értjük a nézőpontot, ahonnan Isten lát.</h3>
+
+  <hr>
+
+  <h2>I. 🌾 Az Álmodó</h2>
+
+  <p>József már fiatalon másképp lát.  
+  Álmai nem jövőt jósolnak, hanem belső képeket mutatnak arról,  
+  ami még csak csírában él benne: az Egység tudata.  
+  Testvérei ezt nem értik,  
+  mert az, aki a Forráshoz közelebb hall,  
+  mindig idegen marad ott, ahol a világ még a versenyt hallja.</p>
+
+  <p>Az álom a lélek nyelve.  
+  Amikor a szív képeket küld az elmének,  
+  a tudat megpróbálja lefordítani — és ezzel félre is érti.  
+  Így lesz a látomásból hiúság, a küldetésből gőg.  
+  De az álom nem tűnik el, csak formát vált.  
+  Ami isteni, az nem hagyja magát elfelejteni.</p>
+
+  <hr>
+
+  <h2>II. 💔 Az Árulás</h2>
+
+  <p>Az irigység mindig az elutasított saját fény tükre.  
+  A testvérek Józsefet árulják el,  
+  de valójában önmagukban azt a részt vetik el,  
+  amely még hisz a szeretetben.  
+  A kút, ahová vetik, az emberi lélek mélypontja:  
+  a pillanat, amikor már semmi sem biztos, csak a sötétség.</p>
+
+  <p>De a mélypont mindig kapu.  
+  Józsefet eladják, de a sors nem elhagyja,  
+  hanem elindítja az úton, ahol a fény már nem kívülről jön.  
+  Minden elvesztett pozíció egy új nézőpont születése.</p>
+
+  <hr>
+
+  <h2>III. 🔥 A Próbák Tüze</h2>
+
+  <p>Potifár háza, a börtön, az elfeledettség évei —  
+  mind a Forrás iskolái.  
+  Aki látni akar, annak előbb meg kell tanulnia hallgatni.  
+  A próbatételek nem büntetések,  
+  hanem a lélek finomhangolásai:  
+  ahol a hiúság lehull, és csak a hit marad.</p>
+
+  <p>József már nem az álmaiban bízik,  
+  hanem abban, aki azokat küldi.  
+  A megértés nem az eseményekben,  
+  hanem a csendes kitartásban születik meg.</p>
+
+  <hr>
+
+  <h2>IV. 🌅 A Felemelkedés</h2>
+
+  <p>Amikor eljön az idő, a fáraó álmaihoz hívják.  
+  És József már nem magyaráz, hanem szolgál:  
+  a bölcsesség nem tudás, hanem alázat.  
+  Az ember, aki már átment az áruláson,  
+  többé nem ítél — csak megérti a rendet a káoszban.</p>
+
+  <p>A fáraó felismeri a fényt benne,  
+  és József a hatalom csúcsára kerül.  
+  De nem a hatalomért, hanem azért,  
+  hogy megmentse azokat, akik eladták őt.  
+  A kegyelem mindig körbeér.</p>
+
+  <hr>
+
+  <h2>V. 💧 A Megbocsátás Kvantuma</h2>
+
+  <p>Amikor testvérei éhesen elé járulnak,  
+  József már nem a múltat látja,  
+  hanem a tervet, amit a Forrás szőtt rajta keresztül.  
+  Könnyek között mondja:  
+  <em>„Ti rosszat gondoltatok ellenem, de Isten jót hozott ki belőle.”</em></p>
+
+  <p>Ez a megbocsátás nem morális gesztus,  
+  hanem felismerés: nincs valódi ellenség, csak tudatlan rész.  
+  Az árulás és a megmentés ugyanannak a hullámnak két fázisa —  
+  egyik a zuhanás, másik az emelkedés,  
+  de a mozdulat ugyanaz: a szeretet munkája.</p>
+
+  <p style="text-align:center; margin-top:30px;">
+    József nem lett más ember —  
+    csak átlátszóbb az isteni fény számára.  
+    Az élet árulása a tudat beavatása.  
+    Minden sebből forrás fakad,  
+    ha elég mélyen engedjük a fényt belé folyni.
+  </p>
+
+          <!-- További tartalom -->
+      <a href="#" class="back-to-top">↑ Vissza a menühöz</a>
+       </section>
+
+    <!-- Mózes -->
+    <section id="mozes" class="story-section"> <h1>Mózes – A Szabadulás Paradoxona</h1>
+  <hr>
+
+  <h3>A rabság nem hely, hanem tudatállapot.  
+  Az ember addig hiába lép ki Egyiptomból,  
+  amíg Egyiptom benne él.  
+  A szabadulás nem a bilincsek leesése,  
+  hanem a félelem elengedése a szívben.</h3>
+
+  <hr>
+
+  <h2>I. 🌑 A Hívás</h2>
+
+  <p>Mózes nem a templomban hallja meg Istent, hanem a pusztában.  
+  A csipkebokor lángja nem kívül ég, hanem benne:  
+  a tudat első felismerése, hogy a Forrás nem távoli hatalom,  
+  hanem élő jelenlét.  
+  A tűz nem éget, csak világít —  
+  mert ez már nem az ítélet, hanem a felébredés fénye.</p>
+
+  <p>A hívás mindig személyes,  
+  de sosem egyéni.  
+  Isten nem egy embert küld, hanem egy tudatot:  
+  hogy a nép — az emberiség — önmagán belül szabaduljon meg.</p>
+
+  <hr>
+
+  <h2>II. 🔥 Az Egyiptomi Rabság</h2>
+
+  <p>Egyiptom nem csak a fáraó birodalma,  
+  hanem a félelem rendszere, amelyben az ember elhiszi,  
+  hogy a létét mások irányítják.  
+  Ez a legősibb illúzió:  
+  hogy a szabadság kívülről jön, nem belülről fakad.</p>
+
+  <p>A csapások nem bosszúk, hanem tükrök.  
+  Minden szenvedés egy felismerésre hív:  
+  hogy az ember saját kötöttségeinek teremtője is.  
+  Isten nem rombol, csak felfedi, amit már nem lehet tovább rejteni.</p>
+
+  <hr>
+
+  <h2>III. 🌊 A Kivonulás</h2>
+
+  <p>A Vörös-tenger kettéválása nem természeti csoda,  
+  hanem a hit kvantumugrása:  
+  amikor az ember rálép az ismeretlenre,  
+  és a bizalom ereje valósággá válik.  
+  A víz elválik, mert a félelem enged.</p>
+
+  <p>De a szabadság első pillanata nem a megérkezés,  
+  hanem a puszta kezdete.  
+  Mózes népe már nem rabszolga,  
+  mégis fél a szabadságtól.  
+  Mert a szabadság nem parancs, hanem felelősség:  
+  mostantól nem más dönt helyettük.</p>
+
+  <hr>
+
+  <h2>IV. 📜 A Törvény és a Szív</h2>
+
+  <p>A Sínai-hegyen Mózes nem új szabályokat hoz,  
+  hanem a rend emlékezetét.  
+  A kőtáblák a lélekbe vésett minták,  
+  amelyeket az ember elfeledett.  
+  A Tízparancsolat nem korlátozás, hanem útmutatás:  
+  hogyan lehet a szabadságot szeretetben megtartani.</p>
+
+  <p>De a nép nem érti.  
+  Aranyborjút készítenek,  
+  mert a látható biztonságot jobban szeretik, mint a láthatatlan hitet.  
+  Így minden nemzedék újra eljátssza:  
+  a hitből vallás, a vallásból rendszer, a rendszerből újra rabság lesz.</p>
+
+  <hr>
+
+  <h2>V. 🌅 A Belső Ígéret Földje</h2>
+
+  <p>Mózes nem lép be az ígéret földjére,  
+  mert az nem földrajzi hely, hanem tudati állapot.  
+  Az ő küldetése a híd:  
+  elvezetni a népet a küszöbig,  
+  hogy azok, akik utána jönnek, már a szívből lássanak.</p>
+
+  <p>Az igazi ígéret földje az a pont,  
+  ahol a törvény és a szeretet eggyé válik.  
+  Ahol már nem kell kőtábla,  
+  mert a szív írja a rendet magába.</p>
+
+  <p style="text-align:center; margin-top:30px;">
+    Mózes útja nem lezárult, hanem bennünk folytatódik.  
+    Minden szabad döntés egy új kivonulás,  
+    minden megbocsátás egy átkelt tenger.  
+    A szabadság nem menekülés,  
+    hanem hazatalálás a Forráshoz — önmagunkban.
+  </p>
+
+    <!-- További tartalom -->
+      <a href="#" class="back-to-top">↑ Vissza a menühöz</a>
+     </section>
+
+    <!-- Józsué -->
+    <section id="jozsue" class="story-section">   
+    <h1>Józsué – A Hit, Amely Félreérti Istent</h1>
+  <hr>
+
+  <h3>Nem a hit öl, hanem amikor a hitből hiányzik a szeretet.  
+  Józsué története arról szól,  
+  hogyan lesz az isteni ígéretből emberi háború,  
+  amikor a szív már nem hallja a csendet,  
+  csak a parancsot.</h3>
+
+  <hr>
+
+  <h2>I. ⚔️ A Megörökölt Küldetés</h2>
+
+  <p>Mózes után Józsué veszi át a nép vezetését.  
+  A feladat világosnak tűnik:  
+  elfoglalni az ígéret földjét.  
+  De amit Isten ígér, azt nem karddal kell megszerezni,  
+  hanem belső felismeréssel:  
+  hogy a föld nem birtok, hanem tér a szeretetnek.  
+  Józsué azonban még a régi szemmel lát.  
+  A szabadság számára hódítás,  
+  nem együtt-létezés.</p>
+
+  <p>A nép is ezt tanulta a pusztában:  
+  hogy az isteni akarat harcban valósul meg.  
+  Így a Törvény, amelyet a szívnek szántak,  
+  fegyverré válik a kézben.</p>
+
+  <hr>
+
+  <h2>II. 🩸 Jerikó Falai</h2>
+
+  <p>Józsué hét napig járja Jerikót,  
+  majd megfúvatja a kürtöket —  
+  és a falak leomlanak.  
+  A hit valóban hegyeket mozgat,  
+  de a szív szándéka dönti el,  
+  mit épít és mit rombol.  
+  Itt a csoda még az erő diadala,  
+  nem a szereteté.  
+  Az ember megtapasztalja:  
+  a hit képes valóságot alakítani,  
+  de ha nincs benne szeretet,  
+  a valóság pusztítóvá lesz.</p>
+
+  <p>Az ígéret földje így vérrel telik meg,  
+  pedig a Forrás sosem kért áldozatot —  
+  csak jelenlétet.</p>
+
+  <hr>
+
+  <h2>III. 🌪️ A Hang, Amely Elhalkul</h2>
+
+  <p>Józsué parancsokat hall, de már nem különböztet.  
+  Az elme megszokja az „Isten mondta” igazolást,  
+  és nem veszi észre, hogy a hang egyre emberibb,  
+  egyre keményebb.  
+  Az isteni szó lassan elhalkul,  
+  a saját vágy és félelem hangja pedig felerősödik.  
+  A próféta, aki nem figyel a csendre,  
+  végül önmagának engedelmeskedik —  
+  Isten nevében.</p>
+
+  <p>Ez a hit legnagyobb kísértése:  
+  amikor a bizonyosság már nem hall,  
+  csak cselekszik.</p>
+
+  <hr>
+
+  <h2>IV. 💧 A Szövetség Torzulása</h2>
+
+  <p>Az ígéret földje birtokká válik,  
+  a nép önmagát különnek látja.  
+  A kiválasztottság már nem felelősség,  
+  hanem jogcím a hódításra.  
+  Így veszik el a Forrás hangja a zajban:  
+  a szövetség, amely a szeretetre épült,  
+  most félelemből őrzi önmagát.</p>
+
+  <p>De a Forrás nem haragszik —  
+  csak elhallgat, hogy az ember végül észrevegye a csendet.  
+  A háború utáni némaságban születik újra a kérdés:  
+  „Biztos, hogy ezt kérte Tőlem?”</p>
+
+  <hr>
+
+  <h2>V. 🌅 Az Ébredés Lehetősége</h2>
+
+  <p>Józsué élete a felismerés felé tart,  
+  bár a szöveg hallgat erről.  
+  De a történet nyitva marad,  
+  mert mindannyiunkban ott él ez a pont:  
+  amikor megkérdezzük,  
+  vajon nem a szeretet lett volna-e az igazi győzelem.</p>
+
+  <p>Az isteni szövetség sosem zárul le,  
+  csak új formát keres.  
+  A harcosból egyszer béketeremtő lesz,  
+  ha felismeri, hogy az igazi erő  
+  nem abban van, amit legyőz,  
+  hanem abban, amit megért.</p>
+
+  <p style="text-align:center; margin-top:30px;">
+    Józsué története figyelmeztetés:  
+    Isten szava nem parancs, hanem meghívás.  
+    Aki karddal hallja, háborút lát;  
+    aki szívvel hallja, szeretetet.  
+    Az ígéret földje nem más,  
+    mint az a pillanat, amikor végre meghalljuk a csendet.
+  </p>
+          <!-- További tartalom -->
+      <a href="#" class="back-to-top">↑ Vissza a menühöz</a>
+       </section>
+
+    <!-- Jónás -->
+    <section id="jonas" class="story-section">   
+    <h1>Jónás – Az Ellenállás, Ami Beavatás</h1>
+  <hr>
+
+  <h3>Aki valóban hallja Isten hangját,  
+  nem mindig örül neki.  
+  Mert a hívás gyakran oda szól, ahová az ember legkevésbé akar menni.  
+  Jónás története annak a felismerése,  
+  hogy a menekülés is a tanítás része —  
+  és a mélység nem büntetés, hanem szülés.</h3>
+
+  <hr>
+
+  <h2>I. 🌪️ A Hívás, Amit Nem Akarsz Hallani</h2>
+
+  <p>Isten Ninivébe küldi Jónást, hogy szóljon a néphez.  
+  De Jónás menekül — nem a bátorság hiánya miatt,  
+  hanem mert fél az irgalom erejétől.  
+  Ő ítéletet vár, Isten viszont megváltást kínál.  
+  Ez az első próbatétel:  
+  felismerni, hogy a szeretet nem az igazság ellentéte,  
+  hanem annak beteljesülése.</p>
+
+  <p>A hajó, amelyre felszáll, Tarzisz felé tart —  
+  vagyis mindig az ellenkező irányba, mint a hívás.  
+  A menekülés iránya azonban mindig visszafordít:  
+  a viharban nem a tenger dühöng,  
+  hanem a lélek küzd önmagával.</p>
+
+  <hr>
+
+  <h2>II. 🌊 A Mélység</h2>
+
+  <p>Jónás a tengerbe vetve találja meg az egyetlen helyet,  
+  ahol már nincs kontrollja semmi felett.  
+  A hal gyomra a tudat legsötétebb rétege,  
+  ahol a felszín minden zaja elhallgat.  
+  Három nap a csendben — három nap a belső halálban.  
+  Itt omlik össze a büszkeség, és születik meg a hit.</p>
+
+  <p>A hal nem börtön, hanem méh.  
+  A sötétség nem ítélet, hanem előkészítés.  
+  Aki eljut idáig, az már nem Isten elől menekül,  
+  hanem önmaga elől —  
+  és ott, a legmélyebb ponton, megtalálja mindkettőt.</p>
+
+  <hr>
+
+  <h2>III. 💧 Az Új Küldetés</h2>
+
+  <p>A hal partra veti, és a hívás újra megszólal:  
+  „Menj Ninivébe.”  
+  Jónás most engedelmeskedik, de nem vakon.  
+  Már nem a düh hajtja, hanem a tapasztalat,  
+  hogy a Forrás hangja nem hallgat el,  
+  csak vár, míg az ember készen áll a meghallására.</p>
+
+  <p>Ninive népe megtér —  
+  nem félelemből, hanem felismerésből.  
+  És Jónás, aki haraggal figyeli az irgalmat,  
+  újra megtanulja:  
+  Isten nem a bűnt bünteti, hanem a szív keménységét oldja.</p>
+
+  <hr>
+
+  <h2>IV. 🌿 A Harag és a Növény</h2>
+
+  <p>Jónás leül egy bokor árnyékába,  
+  és haragszik, mert Isten nem ítélt.  
+  De a bokor kiszárad, és Isten megszólal:  
+  „Te sajnálod a növényt, amelyet nem te növesztettél.  
+  Én ne sajnáljam a várost, ahol emberek élnek,  
+  akik nem tudják, mi a jobb és a bal kezüket?”</p>
+
+  <p>Itt érti meg Jónás a kegyelem természetét:  
+  hogy az életet nem érdemelni kell, hanem elfogadni.  
+  A szeretet nem logikus, hanem élő.  
+  Az irgalom nem kivétel a törvény alól,  
+  hanem annak valódi értelme.</p>
+
+  <hr>
+
+  <h2>V. 🌅 A Belső Ninive</h2>
+
+  <p>Ninive nem város, hanem állapot.  
+  Mindannyiunkban van egy rész,  
+  amit ítélünk, amit pusztulni hagynánk.  
+  De Isten minden ilyen részre is azt mondja:  
+  „Élni akarom.”  
+  A próféta végül nem várost ment meg,  
+  hanem saját szívének elutasított oldalát.</p>
+
+  <p style="text-align:center; margin-top:30px;">
+    Jónás nem bukott el, csak megtanult hallani.  
+    Mert aki egyszer meghallotta a hangot a mélységben,  
+    az többé nem menekül —  
+    csak figyel.  
+    A hívás mindig újra szól,  
+    amíg a szív végül azt válaszolja:  
+    <strong>„Igen.”</strong>
+  </p>
+          <!-- További tartalom -->
+      <a href="#" class="back-to-top">↑ Vissza a menühöz</a>
+       </section>
+
+    <!-- Királyság -->
+    <section id="kiraly" class="story-section">      
+    <h1>A Királyság Kísértése – A Belső Uralom Elvesztése</h1>
+  <hr>
+
+  <h3>Isten nem királyt akart, hanem kapcsolatot.  
+  A királyság gondolata az emberi félelemből született:  
+  a nép nem a csendben akarta hallani a Forrást,  
+  hanem egy ember szaván keresztül.  
+  A hit meghajlott a látható előtt,  
+  és ezzel a szövetség szent közvetlensége intézménnyé merevedett.</h3>
+
+  <hr>
+
+  <h2>👑 A Kívülről Jövő Hatalom Kísértése</h2>
+
+  <p>A király iránti vágy a hit legnagyobb próbatétele.  
+  A nép, amelyet addig a Forrás közvetlenül vezetett,  
+  most bizonyosságot akart – egy arcot, egy parancsot, egy kardot.  
+  Így születik meg a vallásos hatalom archetípusa:  
+  amikor az ember a láthatót választja a láthatatlan helyett,  
+  a szív hallgatását a külső szóra cseréli.</p>
+
+  <p>Ez a pillanat a kapcsolat torzulása:  
+  az isteni meghívásból emberi parancs lesz.  
+  A Forrás csendje nem elég,  
+  mert a nép fél attól, amit nem tud uralni.  
+  A királyt tehát nem Isten adja, hanem a félelem teremti.</p>
+
+  <hr>
+
+  <h2>🕊️ A Belső Vezetés Elutasítása</h2>
+
+  <p>A Forrás sosem kívánt trónt.  
+  A trón a távolság szimbóluma, a kapcsolat helyett hatalmat jelent.  
+  Isten a nép szívében akart lakozni,  
+  nem a palota aranyában.  
+  A nép mégis azt kérte:  
+  „Adj nekünk királyt, mint a többi nemzetnek.”  
+  Ezzel kimondta, hogy inkább tartozni akar, mint hinni.</p>
+
+  <p>A belső vezetés – az a halk hang, amely nem kényszerít –  
+  háttérbe szorul, amikor a külső hatalom lép a helyébe.  
+  Így történik, hogy a törvény, amely a szeretet rendje volt,  
+  most eszközzé válik a rend erőszakos fenntartására.  
+  Józsué kardja és Saul trónja ugyanabból a gyökérből nő:  
+  abból a félreértésből, hogy Isten akarata legyőzhető vagy képviselhető ember által.</p>
+
+  <hr>
+
+  <h2>⚔️ A Félelem Nyelve</h2>
+
+  <p>A nép nem hitből kér királyt, hanem félelemből.  
+  Azt mondják: „Kell valaki, aki harcol értünk.”  
+  De a Forrás sosem harcolt – csak áramlott.  
+  A hit nyelve a bizalom,  
+  a félelem nyelve a védekezés.  
+  Aki védelemért könyörög, már elhitte,  
+  hogy a világ ellene van.</p>
+
+  <p>A külső hatalom ezt a félelmet tartja életben,  
+  mert a félelem engedelmességet szül.  
+  A Forrás viszont szabadságot akar,  
+  még ha ez azzal jár is,  
+  hogy az ember időnként eltéved,  
+  amíg újra meg nem hallja a csendet.</p>
+
+  <hr>
+
+  <h2>🌍 A Szövetség Birtokká Torzulása</h2>
+
+  <p>Az ígéret földje sosem birtok volt,  
+  hanem tudatállapot: a szeretet tere.  
+  De a király ezt földrajzi határrá tette,  
+  és a nép szemében a szövetség jogcím lett, nem meghívás.  
+  A kiválasztottság ekkor torzul el –  
+  a felelősségből kiváltság,  
+  a kapcsolatból hierarchia,  
+  az isteni jelenlétből intézmény lesz.</p>
+
+  <p>A templom felépül,  
+  de a szív már nem a trónterem,  
+  hanem a palota udvara.  
+  És amikor a király hatalma nő,  
+  a Forrás hangja elhalkul —  
+  mert a szeretet nem versenyez a zajjal.</p>
+
+  <hr>
+
+  <h2>💧 A Csend, Mint Utolsó Próféta</h2>
+
+  <p>A Forrás nem vonul vissza – csak vár.  
+  Mert a csend a legnagyobb tanító.  
+  A háborúk, a széthullás, a száműzetés mind ugyanazt a felismerést hozzák:  
+  hogy a valódi királyság nem kívül van,  
+  hanem ott, ahol a szív meghajol a jelenlét előtt.</p>
+
+  <p>Ezért engedte meg Isten a királyt:  
+  hogy az ember végül megértse,  
+  a trón mindig üres marad, ha nem a szeretet ül benne.  
+  És amikor minden királyság összeomlik,  
+  a csendből újra megszólal a hang:  
+  <em>„Biztos, hogy ezt kérted Tőlem?”</em></p>
+
+  <p style="text-align:center; margin-top:30px;">
+    A valódi uralom nem mások felett van,  
+    hanem önmagunkban.  
+    Aki hallja a Forrást a csendben,  
+    az király – korona nélkül.
+  </p>
+    <!-- További tartalom -->
+      <a href="#" class="back-to-top">↑ Vissza a menühöz</a>
+       </section>
+
+    <!-- Saul, Dávid és Salamon -->
+    <section id="saul-david" class="story-section">
+        <h1>Saul, Dávid és Salamon – A Hatalom Kvantum-Torzulása</h1>
+  <hr>
+
+  <h3>A királyság nem az Isten ellen elkövetett lázadás,  
+  hanem a saját belső fény elutasítása:  
+  amikor az ember fél a csendtől,  
+  és külső hangot keres a parancsolásra.</h3>
+
+  <hr>
+
+  <h2>I. ⚔️ Saul: A Félelem Királya</h2>
+
+  <p>Saul beiktatása a nép azon vágyát testesíti meg, hogy **olyanok akarjanak lenni, mint a többi nemzet**. Ez a vágy a **félelem** nyelve, nem a **hit** nyelve. Ahelyett, hogy a Forrás csendjében maradnának, a látható, emberi autoritást választják.</p>
+
+  <p>Saul uralkodása a **hiányos hit** példája. Amikor megtartja a legjobb zsákmányt, nem a Forrásnak hódol, hanem a **hiúságának**, mert a nép elismerésére vágyik. Ez a hiúság teszi őt **átlátszatlanná** az isteni fény számára. Ahogy a próféta, aki nem figyel a csendre, végül önmagának engedelmeskedik Isten nevében, úgy Saul szívéből is elhalkul az isteni szó, és a **saját vágy és félelem hangja** erősödik fel. A bukása annak az elme összeomlása, amely a **parancsot** választja a **belső jelenlét** helyett.</p>
+
+  <hr>
+
+  <h2>II. 👑 Dávid: A Visszatérés Kvantuma</h2>
+
+  <p>Dávid a **gyermeki bizalom** és a **tisztaság** megtestesítője. Góliát elleni győzelme nem fizikai erő, hanem annak a belső felismerése, hogy az **igazi erő nem abban van, amit legyőz, hanem abban, amit megért**. A harca a belső bizonyosságról szól, és arról, hogy a hit a Forrással való közvetlen kapcsolatban rejlik.</p>
+
+  <p>Bár Dávid elbukik, a történet nem az eltévedésről, hanem a **visszatérésről** szól. Bűne (Uriás) a **Próbák Tüze**, de mély megbánása által a hiúság lehull, és ő mindig visszatér a **Forrás csendjéhez**. Ezzel lehetővé teszi, hogy a kegyelem (az Isteni Szeretet) gyorsabb legyen, mint a bűntudat. Uralma a legmagasabb pont, mert az a király, aki a legnagyobb tévedésből is visszatér az **Egység visszhangjához a szívben**.</p>
+
+  <hr>
+
+  <h2>III. 💎 Salamon: A Bölcsesség Torzulása</h2>
+
+  <p>Salamonnal a királyság a **külső pompa** és a **politikai szövetség** csúcsára ér. Kezdetben a **bölcsesség** (a Forrás ajándéka) vezeti, de ez a bölcsesség lassan hatalommá és külső gazdagsággá torzul.</p>
+
+  <p>Bár felépíti a Templomot, ami az **Egység** fizikai szimbóluma, a szívében elkezdi elveszíteni az **alázatot**, mert a bölcsesség nem tudás, hanem alázat. A rengeteg idegen feleség és a mérhetetlen gazdagság elrejti a **csendet** előle. A **szövetség**, amely a szeretetre épült, lassan **félelemből** őrzi önmagát. A hatalom már nem azért van, hogy szolgáljon, hanem a **saját fényét** (hiúságát) vetíti ki.</p>
+
+  <hr>
+
+  <h2>IV. 💔 A Szakadás: Az Illúzió Teljessége</h2>
+
+  <p>A királyság szakadása (Izrael és Júda) a **külső megnyilvánulása** annak, hogy a belső **Egység** már felbomlott az elmében. A távolság csak látszat, de a szakadás megélése szükséges a felismeréshez. A külső térben (az ország) történik a szétválás, hogy a **belső térben** (a szívben) újra felébredhessen a vágy az Egységre.</p>
+
+  <p>Ez a folyamat a tudat beavatása. Mindkét királyság a **különválás** eltérő formáját képviseli: az egyik a **külső érdekeket** (a világ zaját), a másik a **törvényt** (a lojalitás hangját) választja, de utóbbiból **hiányzik az öröm**. A szétválás az az út, ahol a nép végül rádöbben, hogy a valódi erő nem abban van, amit legyőz, hanem abban, amit megért. A **szeretet sosem szakadt meg**.</p>
+
+  <p style="text-align:center; margin-top:30px;">
+    A királyságok bukása nem ítélet, hanem felhívás:  
+    az embernek vissza kell térnie a Forráshoz.  
+    A ház nem változott — csak a látás.  
+    Ez a valódi megtérés:  
+    amikor a hatalom nem ítél, hanem szolgál.
+  </p>
+              <!-- További tartalom -->
+      <a href="#" class="back-to-top">↑ Vissza a menühöz</a>
+       </section>
+
+    <!-- További szakaszok... -->
+
+  </main>
+
   <footer>
     <p>© 2025 Kvantum-Szövetség – A Forrás csendjében</p>
   </footer>
 
+  <script>
+    // Mobilos menü kezelése
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const mobileNavContent = document.getElementById('mobileNavContent');
+    
+    mobileNavToggle.addEventListener('click', function() {
+      if (mobileNavContent.style.display === 'block') {
+        mobileNavContent.style.display = 'none';
+        mobileNavToggle.textContent = '📖 Történetek menüje';
+      } else {
+        mobileNavContent.style.display = 'block';
+        mobileNavToggle.textContent = '✕ Menü bezárása';
+      }
+    });
+
+    // Mobilos menü automatikus bezárása linkre kattintáskor
+    document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+      link.addEventListener('click', function() {
+        mobileNavContent.style.display = 'none';
+        mobileNavToggle.textContent = '📖 Történetek menüje';
+      });
+    });
+
+    // Simpel vissza a tetejére gomb funkcionalitás
+    document.querySelectorAll('.back-to-top').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        
+        // Mobilon a menü is megnyílik
+        if (window.innerWidth <= 768) {
+          mobileNavContent.style.display = 'block';
+          mobileNavToggle.textContent = '✕ Menü bezárása';
+        }
+      });
+    });
+    
+    // Aktív navigációs link beállítása
+    const sections = document.querySelectorAll('.story-section');
+    const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav-links a');
+    
+    window.addEventListener('scroll', function() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 100) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Mobilon a menü automatikus bezárása nagyobb képernyőre váltáskor
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        mobileNavContent.style.display = 'none';
+        mobileNavToggle.textContent = '📖 Történetek menüje';
+      }
+    });
+  </script>
 </body>
-</html>
+      </html>
