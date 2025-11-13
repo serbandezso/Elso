@@ -84,7 +84,82 @@
   </style>
 </head>
 <body>
+<!-- HERO: kezdődjön itt -->
+<section id="hero" role="banner" aria-labelledby="hero-title" style="
+  box-sizing: border-box;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.25rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15)), url('/Elso/hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+">
+  <div style="
+    max-width: 900px;
+    width: 100%;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(4px);
+    padding: 2.25rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  ">
+    <h1 id="hero-title" style="
+      margin: 0 0 0.75rem 0;
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    ">
+      Nem kérem, hogy higgy nekem
+    </h1>
 
+    <p style="
+      margin: 0 0 1.25rem 0;
+      font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+      line-height: 1.55;
+      opacity: 0.98;
+    ">
+      Mert ami itt le van írva, nem tudás — hanem nemtudás.
+      Valami, ami lehet minden és semmi. Csak egy meghívás:
+      olvasd el. Adj esélyt magadnak, az Életnek, a Forrásnak, Istennek.
+    </p>
+
+    <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+      <a href="#tovabb" style="
+        display:inline-block;
+        text-decoration:none;
+        padding:0.6rem 1rem;
+        border-radius:10px;
+        font-weight:600;
+        background: rgba(255,255,255,0.12);
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.08);
+        transition: transform .18s ease, background .18s ease;
+      " onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+        Olvass tovább
+      </a>
+
+      <a href="/Elso/kapcsolat.html" style="
+        display:inline-block;
+        text-decoration:none;
+        padding:0.6rem 1rem;
+        border-radius:10px;
+        font-weight:600;
+        background: transparent;
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.18);
+      ">
+        Kapcsolat / Visszajelzés
+      </a>
+    </div>
+  </div>
+</section>
+<!-- HERO: vége -->
+
+<!-- Egy célzott horgony a "Tovabb" gombhoz -->
+<section id="tovabb" style="padding:3rem 1.25rem;">
+  <!-- ide jöhet a folytatás tartalma -->
+</section>
   <header>
     <h1>Kvantum-Szövetség</h1>
       <nav>
