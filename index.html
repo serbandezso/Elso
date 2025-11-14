@@ -81,6 +81,64 @@
       border-top: 1px solid #eee;
       padding-top: 10px;
     }
+    /* Audio Player Styles */
+        .audio-section {
+            background: linear-gradient(135deg, var(--light-bg) 0%, #f5f2ea 100%);
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .audio-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .audio-icon {
+            margin-right: 0.8rem;
+            font-size: 1.8rem;
+        }
+
+        .audio-player {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            border-radius: 10px;
+            background: white;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .audio-description {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--light-green);
+            font-size: 1rem;
+        }
+
+        .audio-download {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: var(--quantum-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .audio-download:hover {
+            background: var(--quantum-purple);
+        }
+
   </style>
 </head>
 <body>
@@ -173,7 +231,21 @@
                <a href="mag.html">A mag</a>
     </nav>
   </header>
-
+<!-- Hanganyag szekció -->
+                <div class="audio-section">
+                    <h2 class="audio-title"><span class="audio-icon">🎵</span> Ismertető a Kvantum-Szövetségről</h2>
+                    <div class="audio-player">
+                        <!-- M4A fájl - elsődleges formátum -->
+                        <audio controls style="width: 100%;">
+                            <source src="ismerteto-kvantum-szovetseg.m4a" type="audio/mp4">
+                            <source src="ismerteto-kvantum-szovetseg.mp3" type="audio/mpeg">
+                            A böngészője nem támogatja az audio elemet.
+                            <a href="ismerteto-kvantum-szovetseg.mp3">Töltse le a hangfájlt</a>
+                        </audio>
+                        <p class="audio-description">Hallgassa meg a Kvantum-Szövetség projektjeinek bemutatását</p>
+                        <a href="ismerteto-kvantum-szovetseg.mp3" class="audio-download" download>Hangfájl letöltése</a>
+                    </div>
+                </div>
   <main>
 
     <h1>A Káosz Táncától a Csendes Választásig: Egy Személyes Út az Önátadáshoz</h1>
